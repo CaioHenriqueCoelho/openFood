@@ -16,7 +16,7 @@ Para usar este projeto, basta seguir estas etapas simples:
 8. extraia todos os arquivos da pasta data
 9. configure o horario para o cron  no arquivo config_cron.json
 10. quando chegar o horário configurado o banco de dados será populado com as informações de cada arquivo json da pasta /data
-11. configure a chave API-Key por padrão está "abc123"
+11. configure a chave API-Key por padrão está "abc123" o arquivo para configuração fica em middleware/authentication.js (necessário para chamar os endpoints)
 12. inicie o projeto com o comando no terminal: node index.js
 13. faça a consulta na api no endpoint /  exemplo: 127.0.0.1:3000/
 14. verifique o status

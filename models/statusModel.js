@@ -13,7 +13,6 @@ class StatusModel {
         return new Promise((resolve, reject) => {
   
             let dbStatus = 'Desconectado';
-            let lastCronExecution = 'N/A';
             let uptime = 'N/A';
             let memoryUsage = 'N/A';
     
@@ -21,15 +20,19 @@ class StatusModel {
                 if (!dbErr) {
                     dbStatus = 'Conectado';
                 }
-                const dataUTC = new Date(result[0].last_cron);
-                const dataLocal = dataUTC.toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
-                lastCronExecution = dataLocal;
+                let dataLocal = 'N/A';
+                if(result.length == 0){
+                    
+                }else{
+                    const dataUTC = new Date(result[0].last_cron);
+                    const dataLocal = dataUTC.toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+                }
                 uptime = os.uptime();
                 memoryUsage = process.memoryUsage();
                 
                 const response = {
                     dbStatus,
-                    lastCronExecution,
+                    dataLocal,
                     uptime,
                     memoryUsage
                 };

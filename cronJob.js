@@ -6,7 +6,7 @@ const updateData = require('./helpers/updateData');
 
 function lerConfiguracao() {
   try {
-    const configRaw = fs.readFileSync('config.json');
+    const configRaw = fs.readFileSync('config_cron.json');
     const config = JSON.parse(configRaw);
     return config;
   } catch (error) {

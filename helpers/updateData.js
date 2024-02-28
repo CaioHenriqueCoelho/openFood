@@ -9,8 +9,11 @@ function updateData() {
             const directoryPath = './data';
             const filesArray = getFilesInDirectory(directoryPath);
             for (let i = 0; i < filesArray.length; i++) {
-                let info = await dados(filesArray[i]);
-                await inserirDados(info);
+                if(filesArray[i].includes('json')){
+                  let info = await dados(filesArray[i]);
+                  await inserirDados(info);
+                }
+
             }
             console.log('Todos os dados foram inseridos com sucesso.');
             resolve();

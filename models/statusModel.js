@@ -1,4 +1,3 @@
-
 const os = require('os');
 const { exec } = require('child_process');
 class StatusModel {
@@ -21,11 +20,9 @@ class StatusModel {
                     dbStatus = 'Conectado';
                 }
                 let dataLocal = 'N/A';
-                if(result.length == 0){
-                    
-                }else{
+                if(result.length != 0){
                     const dataUTC = new Date(result[0].last_cron);
-                    const dataLocal = dataUTC.toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+                    dataLocal = dataUTC.toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
                 }
                 uptime = os.uptime();
                 memoryUsage = process.memoryUsage();
@@ -36,6 +33,7 @@ class StatusModel {
                     uptime,
                     memoryUsage
                 };
+
                 resolve(response);
             });
         

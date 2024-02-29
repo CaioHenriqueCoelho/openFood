@@ -10,9 +10,9 @@ class ProductService{
         const totalProducts = await productModel.getTotalProducts();
         const pageSize = 100;
         const totalPages = Math.ceil(totalProducts / pageSize);
-
+        const offset = (page - 1) * pageSize;
         if (page < 1 || page > totalPages) { throw new Error('Página não Encontrada.'); }
-        products = await productModel.getProducts(page, 100);
+        products = await productModel.getProducts(offset, 100);
         return products;
     }
 

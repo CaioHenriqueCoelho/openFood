@@ -37,7 +37,6 @@ function inserirDados(dados) {
     dados.forEach(item => {
       const { code, url, creator, created_t, created_datetime, last_modified_t, last_modified_datetime, product_name, quantity, packaging, packaging_tags } = item;
       const date = getDate();
-      // Inserir dados na tabela product caso já existir ignorar
       db.query(
         'INSERT IGNORE INTO product (code, url, creator, created_t, created_datetime, last_modified_t, last_modified_datetime, product_name, quantity) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)',
         [code, url, creator, date, date, date, date, product_name, quantity],

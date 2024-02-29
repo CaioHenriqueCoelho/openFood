@@ -101,7 +101,7 @@
         }
       },
       "put": {
-        "summary": "Update Info Product",
+        "summary": "Update Name Product",
         "tags": ["Products"],
         "description": "Update status to deleted",
         "parameters": [
@@ -118,6 +118,14 @@
             "in": "path",
             "required": true,
             "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "product_name",
+            "in": "path",
+            "required": true,
+            "schema": {
               "type": "string",
               "format": "uuid"
             }
@@ -125,7 +133,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK1!",
+            "description": "OK!",
             "content": {
               "application/json": {
                 "example": 

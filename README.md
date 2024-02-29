@@ -25,3 +25,11 @@ Para usar este projeto, basta seguir estas etapas simples:
 17. verifique o status da api
 18. docker configurado porém percebi que o horário do container do docker é diferente (cron job não executou)
 19. caso  tenha alguma aplicação rodando na porta 3000 corrigir
+
+tecnologias:
+Node.js: Plataforma de execução para JavaScript server-side.
+Express: Framework web rápido, flexível e minimalista para Node.js.
+MySQL2: Pacotes para interagir com o banco de dados MySQL a partir de aplicativos Node.js.
+Cron e Node-cron: Pacotes para agendar tarefas (cron jobs) em Node.js.
+Swagger-jsdoc e Swagger-ui-express: Pacotes para documentação de APIs com Swagger/OpenAPI em aplicativos Express.js.
+Supertest: Biblioteca para testes de integração de APIs HTTP.

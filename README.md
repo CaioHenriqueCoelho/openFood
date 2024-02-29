@@ -23,5 +23,5 @@ Para usar este projeto, basta seguir estas etapas simples:
 15. para realizar os testes unitarios execute no terminal : npm test
 16. faça a consulta na api no endpoint /  exemplo: 127.0.0.1:3000/
 17. verifique o status da api
-18. docker configurado porém percebi que o horário do container do docker é diferente
+18. docker configurado porém percebi que o horário do container do docker é diferente (cron job não executou)
 19. caso  tenha alguma aplicação rodando na porta 3000 corrigir

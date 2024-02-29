@@ -23,3 +23,4 @@ Para usar este projeto, basta seguir estas etapas simples:
 15. faça a consulta na api no endpoint /  exemplo: 127.0.0.1:3000/
 16. verifique o status da api
 17. docker configurado porém percebi que o horário do container do docker é diferente
+18. caso  tenha alguma aplicação rodando na porta 3000 corrigir

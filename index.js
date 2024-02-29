@@ -1,5 +1,4 @@
 const { inicializarCron } = require('./cronJob');
-inicializarCron();
 const express = require('express');
 const productRoutes = require('./routes/productsRoutes');
 const swaggerUi = require('swagger-ui-express');
@@ -19,5 +18,8 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
 
 });
+
+inicializarCron();
+
 
 module.exports = app;

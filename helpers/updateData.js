@@ -53,25 +53,7 @@ function inserirDados(dados) {
             console.log('Registro inserido com sucesso:', code);
           }
         }
-      );
-  
-      // Inserir dados na tabela tags caso já existir ignorar
-      db.query(
-        'INSERT IGNORE INTO tags (product_code, packaging, packaging_tags) VALUES (?, ?, ?)',
-        [code, packaging, packaging_tags],
-        (err, result) => {
-          if (err) {
-            console.error('Erro ao inserir o registro na tabela tags:', err);
-            return;
-          }
-          if (result.affectedRows === 0) {
-            console.log('O registro já existe na tabela tags.');
-          } else {
-            console.log('Registro inserido com sucesso na tabela tags:', code);
-          }
-        }
-      );
-      
+      );     
     });
 }
 

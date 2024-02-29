@@ -1,7 +1,7 @@
 # Projeto OpenFood
 
 ## Descrição
-Este projeto é uma api rest com persistência de dados utilizando cron
+Este projeto é uma api rest com persistência de dados utilizando cron job
 
 ## Instalação
 Para usar este projeto, basta seguir estas etapas simples:
